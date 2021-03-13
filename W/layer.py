@@ -45,7 +45,9 @@ class Softmax(Layer):
         return
 
     def forward(self, x):
-        return
+        x = np.exp(x)
+        total = np.sum(x, axis=0)
+        return x/total
 
     def backward(self, x):
-        return 
+        return

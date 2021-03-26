@@ -21,7 +21,7 @@ class L1(Cost):
         avg_cost = np.average(elementwise_loss)
         return avg_cost
 
-    def backward(self, y, y_hat):
+    def backward(self):
         cost_gradient = 1 / self.y_cache.size
         loss_gradient = np.sign(self.y_hat_cache - self.y_cache)
         return cost_gradient * loss_gradient
@@ -35,7 +35,7 @@ class L2(Cost):
         avg_cost = np.average(elementwise_loss)
         return avg_cost
 
-    def backward(self, y, y_hat):
+    def backward(self):
         cost_gradient = 1 / self.y_cache.size
         loss_gradient = 2 * (self.y_hat_cache - self.y_cache)
         return cost_gradient * loss_gradient

@@ -1,13 +1,9 @@
 import numpy as np
 
-# we need elementwise loss
-# average cost
-# summed up cost
-
+# average cost over entire tensor
 class Cost():
-    # func could be np.sum or np.average
-    def __init__(self, func=lambda x:x):
-        self.func = func
+    # func: e.g. np.sum, np.average
+    def __init__(self):
         return
 
     def forward(self, y, y_hat):
@@ -15,26 +11,31 @@ class Cost():
 
     def backward(self, y, y_hat):
         raise NotImplementedError
-    
+
 class L1(Cost):
     
     def forward(self, y, y_hat):
-        elementwise_loss = np.absolute(y-y_hat)
-        cost = self.func(elementwise_loss)
-        #loss = np.absolute(y-y_hat)
-        #avg_cost = np.average(loss)
-        return cost
+        self.y_cache = y
+        self.y_hat_cache = y_hat
+        elementwise_loss = np.absolute(y_hat - y)
+        avg_cost = np.average(elementwise_loss)
+        return avg_cost
 
     def backward(self, y, y_hat):
-        local_gradient = np.sign(y_hat - y) 
-        return local_gradient
+        cost_gradient = 1 / self.y_cache.size
+        loss_gradient = np.sign(self.y_hat_cache - self.y_cache)
+        return cost_gradient * loss_gradient
 
-#class L2(Cost):
+class L2(Cost):
 
-    #def forward(self, y, y_hat):
-        #cost = 
-        #return cost
+    def forward(self, y, y_hat):
+        self.y_cache = y
+        self.y_hat_cache = y_hat
+        elementwise_loss = np.square(y_hat - y)
+        avg_cost = np.average(elementwise_loss)
+        return avg_cost
 
-    #def backward(self, y, y_hat):
-        #local_gradient = 
-        #return local_gradient
+    def backward(self, y, y_hat):
+        cost_gradient = 1 / self.y_cache.size
+        loss_gradient = 2 * (self.y_hat_cache - self.y_cache)
+        return cost_gradient * loss_gradient

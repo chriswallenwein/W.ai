@@ -14,7 +14,7 @@ class L1(Loss):
     def forward(self, y, y_hat):
         self.y_cache = y
         self.y_hat_cache = y_hat
-        elementwise_loss = np.absolute(y-y_hat)
+        elementwise_loss = np.absolute(y_hat - y)
         return elementwise_loss
 
     def backward(self, y, y_hat):

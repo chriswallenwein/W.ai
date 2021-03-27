@@ -18,6 +18,7 @@ class FullyConnectedBiasTrick(Layer):
     def forward(self, x):
         ones = np.ones((1, x.shape[1]))
         x = np.concatenate((ones, x))
+        self.cache = x
         y_hat = self.w@x # the bias trick
         return y_hat
 
@@ -32,22 +33,10 @@ class FullyConnectedNormal(Layer):
 
     def forward(self, x):
         y_hat = self.w@x + self.b
+        self.cache = x
         return y_hat
 
     def backward(self, x):
         return x
 
-FullyConnected = FullyConnectedBiasTrick
-
-class Softmax(Layer):
-
-    def __init__(self):
-        return
-
-    def forward(self, x):
-        x = np.exp(x)
-        total = np.sum(x, axis=0)
-        return x/total
-
-    def backward(self, x):
-        return
+FullyConnected = FullyConnectedNormal

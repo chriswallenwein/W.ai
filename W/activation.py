@@ -10,18 +10,18 @@ class Activation():
     def backward(self, x):
         raise NotImplementedError
     
-class Softmax(Activation):
+# class Softmax(Activation):
 
-    def __init__(self):
-        return
+#     def __init__(self):
+#         return
 
-    def forward(self, x):
-        x = np.exp(x)
-        total = np.sum(x, axis=0)
-        return x/total
+#     def forward(self, x):
+#         x = np.exp(x)
+#         total = np.sum(x, axis=0)
+#         return x/total
 
-    def backward(self, x):
-        return
+#     def backward(self, x):
+#         return
 
 class ReLU(Activation):
     def forward(self, x):

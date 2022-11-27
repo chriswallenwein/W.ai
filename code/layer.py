@@ -1,5 +1,7 @@
 import numpy as np
 
+# TODO: implement Xavier initialization
+
 class Layer():
     def __init__(self):
         return
@@ -13,6 +15,8 @@ class Layer():
 class FullyConnectedBiasTrick(Layer):
 
     def __init__(self, in_dim, out_dim):
+        self.in_dim = in_dim
+        self.out_dim = out_dim
         self.w = 2*np.random.rand(out_dim, in_dim+1) -1
 
     def forward(self, x):
@@ -28,6 +32,8 @@ class FullyConnectedBiasTrick(Layer):
 class FullyConnectedNormal(Layer):
 
     def __init__(self, in_dim, out_dim):
+        self.in_dim = in_dim
+        self.out_dim = out_dim
         self.w = 2*np.random.rand(out_dim, in_dim) -1
         self.b = 2*np.random.rand(out_dim, 1) -1
 

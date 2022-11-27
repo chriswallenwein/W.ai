@@ -9,7 +9,6 @@ import matplotlib.pyplot as plt
 #   - Each pixel is showing one color. The color is determined by the class with the highest probability for that pixel
 #     then calculate max(class probabilities for that pixel) * color of class with highest probability
 
-
 # TODO: Display current loss of model
 
 class Visualization():
@@ -21,6 +20,8 @@ class Visualization():
         self.ax = plt.axes()
     
     def visualize_model(self, model, data_x, data_y):
+        if model.layers[0].in_dim != 2:
+            raise ValueError("Input dimensions of layer must equal 2")
         self.visualize_model_weights(model)
         self.visualize_data(data_x, data_y)
 
@@ -32,7 +33,15 @@ class Visualization():
         self.visualize_data(data_x, data_y)
 
     def visualize_model_weights(self, model):
-        pass
+        xs = np.linspace(self.x_min, self.x_max, 250)
+        ys = np.linspace(self.y_min, self.y_max, 250)
+        mesh_input = np.array(np.meshgrid(xs, ys))
+        # flatten mesh to allow forward pass
+        mesh_input = mesh_input.reshape(2, 250*250)
+        predictions = model.forward(mesh_input)
+        # undo flatten to for squared image
+        predictions = predictions.reshape(250,250)
+        self.ax.contourf(xs, ys, predictions, levels=100, cmap=plt.cm.RdYlGn)
     
     def visualize_layer_weights(self, layer):
         xs = np.linspace(self.x_min, self.x_max, 250)
@@ -49,3 +58,6 @@ class Visualization():
         scatterplot = self.ax.scatter(data_x[:, 0], data_x[:, 1], c=data_y)
         labels = list(np.unique(data_y))
         self.ax.legend(handles=scatterplot.legend_elements()[0], labels=labels)
+        
+    def display_loss(self):
+        pass

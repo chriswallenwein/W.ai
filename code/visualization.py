@@ -58,6 +58,22 @@ class Visualization():
         scatterplot = self.ax.scatter(data_x[:, 0], data_x[:, 1], c=data_y)
         labels = list(np.unique(data_y))
         self.ax.legend(handles=scatterplot.legend_elements()[0], labels=labels)
+    @staticmethod
+    def calculate_boundaries(features):
+        x = features[:, 0]
+        y = features[:, 1]
+        
+        x_std = np.std(x)
+        y_std = np.std(y)
+        
+        x_min = np.min(x) - x_std
+        y_min = np.min(y) - y_std
+        
+        x_max = np.max(x) + x_std
+        y_max = np.max(y) + y_std
+
+        boundaries = (x_min, x_max, y_min, y_max)
+        return boundaries
         
     def display_loss(self):
         pass

@@ -1,4 +1,4 @@
-# neural-network
+# Neural Networks
 
 Quote: If you can't build it, you don't understand it.
 

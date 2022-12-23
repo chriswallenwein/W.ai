@@ -24,6 +24,7 @@ class Visualize():
         Visualize.visualize_data(ax, x, y)
         plt.xlabel("x_1")
         plt.ylabel("x_2")
+        return ax
 
     @staticmethod
     def visualize_model_weights(ax, model, boundaries):
@@ -41,8 +42,6 @@ class Visualize():
         # add legend to data
         plt.colorbar(contourplot, label= "y_hat") 
 
-        
-    
     @staticmethod
     def visualize_data(ax, x, y):
         scatterplot = ax.scatter(x[:, 0], x[:, 1], c=y)

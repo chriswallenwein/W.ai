@@ -1,5 +1,11 @@
 import numpy as np
 
+# TODO: Try generating numbers like this
+#   cov = np.array([[6, -3], [-3, 3.5]])
+#   pts = np.random.multivariate_normal([0, 0], cov, size=800)
+#   plt.plot(pts[:, 0], pts[:, 1], '.', alpha=0.5)
+#   source: https://numpy.org/doc/stable/reference/random/generated/numpy.random.RandomState.multivariate_normal.html
+
 class Generate():
 
     @staticmethod

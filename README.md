@@ -5,8 +5,8 @@ Quote: If you can't build it, you don't understand it.
 The goal of this repository is to build something like [Googles Tensorflow Playground](https://playground.tensorflow.org/) from scratch using NumPy. The focus lies on the algorithms and not so much on the UI.
 
 ## TODO
-[x] Forward pass
-[x] Backward pass
+[x] Forward pass  
+[x] Backward pass  
 [x] Activation functions
     [x] ReLU
     [ ] Sigmoid

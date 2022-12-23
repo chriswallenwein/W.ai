@@ -44,5 +44,5 @@ The goal of this repository is to build something like [Googles Tensorflow Playg
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;&nbsp;] Instance norm  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;&nbsp;] Group norm  
 [&nbsp;&nbsp;] Attention layer  
-[&nbsp;&nbsp;] Simplify code by reimplementing library with JAX instead of NumPy
+[&nbsp;&nbsp;] Simplify code by reimplementing library with JAX instead of NumPy  
 [&nbsp;&nbsp;] Implement traditional machine learning algorithms (regression, KNN, SVM, etc.)  

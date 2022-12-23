@@ -8,41 +8,41 @@ The goal of this repository is to build something like [Googles Tensorflow Playg
 [x] Forward pass  
 [x] Backward pass  
 [x] Activation functions  
-&nbsp;&nbsp;[x] ReLU  
-&nbsp;&nbsp;[ ] Sigmoid  
-&nbsp;&nbsp;[ ] Softmax  
-&nbsp;&nbsp;[ ] TanH  
-[ ] Loss/Cost functions  
-&nbsp;&nbsp;[x] L1 loss  
-&nbsp;&nbsp;[x] L2 loss  
-&nbsp;&nbsp;[ ] Softmax loss  
-&nbsp;&nbsp;[ ] Cross-Entropy loss  
-[ ] Optimizers  
-&nbsp;&nbsp;[ ] Stochastic gradient descent  
-&nbsp;&nbsp;[ ] Batch gradient descent  
-&nbsp;&nbsp;[ ] Minibatch gradient descent  
-&nbsp;&nbsp;[ ] Momentum  
-&nbsp;&nbsp;[ ] RMSProp  
-&nbsp;&nbsp;[ ] Adam  
-[ ] Visualization  
-&nbsp;&nbsp;[ ] x: time, y: loss  
-[ ] Convolutional Neural Networks  
-&nbsp;&nbsp;[ ] convolutional layers  
-&nbsp;&nbsp;[ ] pooling layers  
-[ ] Regularization  
-&nbsp;&nbsp;[ ] L1 regularization  
-&nbsp;&nbsp;[ ] L2 regularization  
-[ ] Weight initialization  
-&nbsp;&nbsp;[ ] Ones  
-&nbsp;&nbsp;[ ] Zeros  
-&nbsp;&nbsp;[ ] Random Normal initialization  
-&nbsp;&nbsp;[ ] Xavier initialization  
-[ ] Dropout  
-[ ] Normalization  
-&nbsp;&nbsp;[ ] Batch norm  
-&nbsp;&nbsp;[ ] Layer norm  
-&nbsp;&nbsp;[ ] Instance norm  
-&nbsp;&nbsp;[ ] Group norm  
-[ ] Attention layer  
-[ ] simplify code by switching NumPy with JAX  
-[ ] Implement traditional machine learning algorithms (regression, KNN, SVM, etc.)  
+&nbsp;&nbsp;&nbsp;&nbsp;[x] ReLU  
+&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;] Sigmoid  
+&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;] Softmax  
+&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;] TanH  
+[&nbsp;] Loss/Cost functions  
+&nbsp;&nbsp;&nbsp;&nbsp;[x] L1 loss  
+&nbsp;&nbsp;&nbsp;&nbsp;[x] L2 loss  
+&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;] Softmax loss  
+&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;] Cross-Entropy loss  
+[&nbsp;] Optimizers  
+&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;] Stochastic gradient descent  
+&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;] Batch gradient descent  
+&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;] Minibatch gradient descent  
+&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;] Momentum  
+&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;] RMSProp  
+&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;] Adam  
+[&nbsp;] Visualization  
+&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;] x: time, y: loss  
+[&nbsp;] Convolutional Neural Networks  
+&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;] convolutional layers  
+&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;] pooling layers  
+[&nbsp;] Regularization  
+&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;] L1 regularization  
+&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;] L2 regularization  
+[&nbsp;] Weight initialization  
+&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;] Ones  
+&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;] Zeros  
+&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;] Random Normal initialization  
+&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;] Xavier initialization  
+[&nbsp;] Dropout  
+[&nbsp;] Normalization  
+&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;] Batch norm  
+&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;] Layer norm  
+&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;] Instance norm  
+&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;] Group norm  
+[&nbsp;] Attention layer  
+[&nbsp;] Simplify code by reimplementing library with JAX instead of NumPy
+[&nbsp;] Implement traditional machine learning algorithms (regression, KNN, SVM, etc.)  

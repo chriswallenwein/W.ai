@@ -1,20 +1,43 @@
 import numpy as np
 
-# average cost over entire tensor
+
 class Cost():
-    # func: e.g. np.sum, np.average
+    """Base class for all cost functions.
+    """
+
     def __init__(self):
         return
 
     def forward(self, y, y_hat):
+        """Forward pass of the cost function.
+        
+        Subclasses should implement this method
+        """
         raise NotImplementedError
 
     def backward(self, y, y_hat):
+        """
+        Backward propagation of the cost function.
+
+        Subclasses should implement this method
+        """
         raise NotImplementedError
 
 class L1(Cost):
-    
+    """
+    L1 cost function
+    """
     def forward(self, y, y_hat):
+        """Forward pass of L1 cost.
+
+        Computes the average elementwise difference between y and y_hat.
+
+        Args:
+            y:
+                The ground truth label
+            y_hat:
+                The predicted label
+        """
         self.y_cache = y
         self.y_hat_cache = y_hat
         elementwise_loss = np.absolute(y_hat - y)

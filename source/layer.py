@@ -1,5 +1,7 @@
 import numpy as np
 
+# TODO add np.array-dimensions to docstrings
+
 class Layer():
     """Base class for all neural network layers."""
 
@@ -42,7 +44,7 @@ class StandardFullyConnected(Layer):
     def forward(self, x: np.ndarray):
         """Computes the output of the layer.
         
-        Computes forward pass of the fully connected layer.
+        Computes forward pass of the fully connected layer for n samples
 
         Arguments:
             x: np.array
@@ -82,9 +84,9 @@ class FullyConnectedBiasTrick(Layer):
 
         Arguments:
             in_dim: int > 0
-                Dimension of one input sample
+                dimension of one input sample
             out_dim: int > 0
-                Dimension of one output sample
+                dimension of one output sample
         """
         self.in_dim = in_dim
         self.out_dim = out_dim
@@ -93,7 +95,7 @@ class FullyConnectedBiasTrick(Layer):
     def forward(self, x: np.ndarray):
         """Computes the output of the layer.
         
-        Computes forward pass of the fully connected layer with the bias trick.
+        Computes forward pass of the fully connected layer with the bias trick for n samples
 
         Arguments:
             x: np.array

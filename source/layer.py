@@ -30,9 +30,9 @@ class StandardFullyConnected(Layer):
 
         Arguments:
             in_dim: int > 0
-                Dimension of one input sample
+                dimension of one input sample
             out_dim: int > 0
-                Dimension of one output sample
+                dimension of one output sample
         """
         self.in_dim = in_dim
         self.out_dim = out_dim

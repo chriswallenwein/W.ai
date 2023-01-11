@@ -7,6 +7,7 @@ The goal of this repository is to build something like [Googles Tensorflow Playg
 ![Alt text](img/tensorflow-playground.png "Tensorflow Playground Screenshot")
 
 ## TODO
+[&nbsp;&nbsp;] Documentation  
 [x] Forward pass  
 [x] Backward pass  
 [x] Activation functions  
@@ -28,6 +29,8 @@ The goal of this repository is to build something like [Googles Tensorflow Playg
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;&nbsp;] Adam  
 [&nbsp;&nbsp;] Visualization  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;&nbsp;] x: time, y: loss  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;&nbsp;] 2D visualization of model, data & cost  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;&nbsp;] 3D visualization of model, data & cost  
 [&nbsp;&nbsp;] Convolutional Neural Networks  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;&nbsp;] convolutional layers  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;&nbsp;] pooling layers  

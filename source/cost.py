@@ -9,17 +9,16 @@ class Cost():
         return
 
     def forward(self, y: np.ndarray, y_hat: np.ndarray):
-        """Forward pass of the cost function.
+        """Computes the cost.
         
-        Subclasses should implement this method
+        Subclasses should implement this method.
         """
         raise NotImplementedError
 
     def backward(self, y: np.ndarray, y_hat: np.ndarray):
-        """
-        Computes the gradient of the cost function.
+        """Computes the gradient of the cost function.
 
-        Subclasses should implement this method
+        Subclasses should implement this method.
         """
         raise NotImplementedError
 
@@ -27,7 +26,7 @@ class L1(Cost):
     """L1 cost"""
 
     def forward(self, y: np.ndarray, y_hat: np.ndarray):
-        """Forward pass of L1 cost.
+        """Computes the L1 cost.
 
         Computes the average elementwise difference between y and y_hat.
 
@@ -62,7 +61,7 @@ class L2(Cost):
     """L2 cost"""
 
     def forward(self, y: np.ndarray, y_hat: np.ndarray):
-        """Forward pass of L2 cost.
+        """Computes the L2 cost.
 
         Computes the average squared elementwise difference between y and y_hat.
 

@@ -1,12 +1,14 @@
 import numpy as np
 
-# TODO add np.array-dimensions to docstrings
-
 class Layer():
     """Base class for all neural network layers."""
 
     def __init__(self):
-        return
+        """Initializes the layer
+
+        Subclasses should implement this method.
+        """
+        raise NotImplementedError
 
     def forward(self, x: np.ndarray):
         """Computes the forward pass of the layer.
@@ -47,11 +49,11 @@ class StandardFullyConnected(Layer):
         Computes forward pass of the fully connected layer for n samples
 
         Arguments:
-            x: np.array
+            x: np.array(input dimension, number of samples)
                 n input samples
 
         Returns:
-            np.array
+            np.array(output dimension, number of samples)
                 output of the layer
         """
         y_hat = self.w@x + self.b
@@ -62,11 +64,12 @@ class StandardFullyConnected(Layer):
         """Computes the gradient of the layer.
         
         Arguments:
-            x: np.array
+            x: np.array(input dimension, number of samples)
                 n input samples
 
         Returns:
-            gradient of the layer
+            np.array(input dimension, number of samples)
+                gradient of the layer
         """
         return x
 
@@ -98,11 +101,11 @@ class FullyConnectedBiasTrick(Layer):
         Computes forward pass of the fully connected layer with the bias trick for n samples
 
         Arguments:
-            x: np.array
+            x: np.array(input dimension, number of samples)
                 n input samples
 
         Returns:
-            np.array
+            np.array(output dimension, number of samples)
                 output of the layer
         """
         ones = np.ones((1, x.shape[1]))
@@ -115,11 +118,12 @@ class FullyConnectedBiasTrick(Layer):
         """Computes the gradient of the layer.
         
         Arguments:
-            x: np.array
+            x: np.array(input dimension, number of samples)
                 n input samples
 
         Returns:
-            gradient of the layer
+            np.array(input dimension, number of samples)
+                gradient of the layer
         """
         return x
 
